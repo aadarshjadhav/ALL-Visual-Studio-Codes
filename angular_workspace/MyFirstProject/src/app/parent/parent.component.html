@@ -1,0 +1,4 @@
+<p>parent works!</p>
+
+<app-child [MyinputData]="parentmsg" (myoutput)="getChildData($event)"></app-child> <!--() this parentheis is and event-->
+<h4>{{childmsg}}</h4>

@@ -1,0 +1,44 @@
+<!-- ⦁  How to change color or bg of div on-click on button using JavaScript
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Add some initial styling to the div */
+    #myDiv {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(81, 40, 174);
+        transition: background-color 0.3s ease;
+        /* Add smooth transition */
+    }
+</style>
+
+<body>
+    <div id="myDiv"></div>
+    <button onclick="toggleColor()">Change Color</button>
+
+    <script>
+        var colorIndex = 0;
+        var colors = ["lightblue", "darkblue", "yellow", "black"];
+
+        function toggleColor() {
+            // Get the reference to the div
+            var myDiv = document.getElementById("myDiv");
+
+            // Change the background color
+            myDiv.style.backgroundColor = colors[colorIndex];
+
+            // Update colorIndex for the next toggle
+            colorIndex = (colorIndex + 1) % colors.length; //The modulo will bring it back to 0th index
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<p>my-http-use2 works!</p>
+
+<table>
+    <tbody>
+        <tr>
+             <th>ID</th>
+             <th>FirstName</th>
+             <th>Image</th>
+        </tr>
+
+        <tr *ngFor="let us of user">
+            <td><a [routerLink]="['/EmpData',us.id]">{{us.id}}</a></td>
+            <td>{{us.first_name}}</td>
+            <td><img src={{us.avatar}} alt="img"></td>
+        </tr>
+
+    </tbody>
+
+</table>
+

@@ -1,0 +1,64 @@
+<p>template-form works!</p>
+
+<!-- <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && OnSubmit() novalidate">
+    <div>
+        <label>FullName</label>
+        <input type="text" class="form-control" name="fullName" [(ngModel)]="form.fullName" 
+        required #fullName="ngModel" [ngClass]="{'is-invalid:f.submitted && fullName.errors'}">
+        @if(f.submitted && fullName.errors)
+        {
+            @if(fullName.errors['required'])
+            {
+                <div>FullName isi required</div>
+            }
+        }
+    </div>
+
+    <div>
+        <label>UserName</label>
+        <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
+        minlength="6" maxlength="20" #username="ngModel" 
+        [ngClass]="{'is-invalid':f.submitted && username.erros}">
+
+        @if(f.submitted && username.errors)
+        {
+            @if(username.erros['required'])
+            {
+                <div>UserName is Required</div>
+            }
+            @if(username.errors['minlength'])
+            {
+                <div>Username must be at least 6 characters</div>
+            }
+            @if(username.errors['maxlength'])
+            {
+                <div>User name must be less than 20 characters</div>
+            }
+        }
+
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" [(ngModel)]="form.email" required email #email="ngModel"
+        [ngClass]="{'is-invalid':f.submitted && email.errors}">
+        @if(f.submitted && email.errors)
+        {
+            @if(email.errors['required'])
+            {
+                <div>emails required</div>
+            }
+            @if(email.errors['email'])
+            {
+                <div>Email is invalid</div>
+            }
+        }
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="form.password" 
+        required #password="ngModel" minlength="8" [ngClass]="{'is-invalid':f.submitted && password.errors}">
+        
+    </div> -->
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Account
+        {
+            accountnum
+            customername
+            balance
+
+            constructor(accountnum, customername, balance)
+            {
+                this.accountnum=accountnum
+                this.customername=balance
+                this.balance=balance
+            }
+
+            widthdrawBalance(amount)
+            {
+                document.write("Inside the WidthdrawBalance")
+                if(this.balance-amount>0)
+                {
+                    this.balance-=amount;
+                    document.write("<br> Current amount is:"+this.balance)
+                }
+                else{
+
+                    document.write(alert("Insuffient Balance!"))
+
+                }
+            }
+
+            depositBalance(amount)
+            {
+                document.write("Inside the depsoitBalance")
+                this.balance=this.balance+amount;
+                document.write("<br> Current amount is:"+this.balance)
+             
+            }
+
+        }
+
+        var act_obj= new Account(10001,"Aadarsh",20000)
+
+
+        var amount=parseInt(prompt("Enter the amount:"))
+        
+        act_obj.widthdrawBalance(amount)
+
+        var amount=parseInt(prompt("Enter the amount:"))
+
+        act_obj.depositBalance(amount)
+
+
+    </script>
+</body>
+</html>

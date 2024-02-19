@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var myarray=[1,2,3,4,5]
+        var myarray2=[]
+
+        for(let i=myarray.length-1;i>=0;i--)
+        {
+            myarray2.push(myarray[i])
+        }
+
+        document.write("Reverse Array Elements:")
+        for(let x of myarray2)
+            document.write(x+" , ")
+
+        document.write("<br>Original Array: " + myarray.join(", ") + "<br>");
+        document.write("Reversed Array: " + myarray2.join(", "));
+
+        // ANOTHER WAY OF DOING THIS
+        // var myArray = [1, 2, 3, 4, 5];
+        // var reversedArray = myArray.slice().reverse();
+
+        // document.write("Original Array: " + myArray.join(", ") + "<br>");
+        // document.write("Reversed Array: " + reversedArray.join(", "));
+
+    </script>
+</body>
+</html>

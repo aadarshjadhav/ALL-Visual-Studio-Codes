@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function displaymovie(obj)
+        {
+            document.write("Inside Display function <br>")
+            document.write(obj.movieid)
+        }
+
+        var movie={movieid:101,moviename:'Jawan',ticket:250}
+        
+        displaymovie(movie)
+
+        // document.write(movie['movieid']+'<br>'+movie['moviename']+'<br>')
+        // document.write(movie.movieid+' '+movie.moviename+' '+movie.ticket)
+    </script>
+</body>
+</html>

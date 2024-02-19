@@ -1,0 +1,39 @@
+<!--20.	Write a JavaScript program to remove items from a dropdown list.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+  <label for="countries">Select a Country:</label>
+  <select id="countries">
+    <option value="usa">United States</option>
+    <option value="canada">Canada</option>
+    <option value="uk">United Kingdom</option>
+    <option value="australia">Australia</option>
+  </select>
+
+  <button onclick="removeSelectedCountry()">Delete Country</button>
+
+  <script>
+    function removeSelectedCountry() {
+      // Get the dropdown element
+      var countriesDropdown = document.getElementById("countries");
+
+      // Check if any option is selected
+      if (countriesDropdown.selectedIndex !== -1) {
+        // Remove the selected country
+        countriesDropdown.remove(countriesDropdown.selectedIndex);
+      } else {
+        alert("Please select a country to remove.");
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    /* border: solid black; */
+    background-image: url("Background_img.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+table{
+    border-collapse: collapse;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 15%;
+    width: 8%; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    border: 5px solid white;
+}
+
+.formcontainter{
+
+    
+
+}
+
+/* Style for Login button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: 5px outset lightgreen;
+    cursor: pointer;
+}
+
+/* Style for SignUp button */
+button[type="submit"] {
+    background-color:#4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: 5px outset lightgreen;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+

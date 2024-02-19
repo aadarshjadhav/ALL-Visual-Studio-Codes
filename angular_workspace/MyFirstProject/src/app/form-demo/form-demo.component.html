@@ -1,0 +1,16 @@
+<h1>form-demo works!</h1>
+
+Enter the Employee_ID::<input type="text" [(ngModel)]="empid"><br>
+Enter the Employee_Name::<input type="text" [(ngModel)]="empname"><br>
+Enter the Employee_Salary::<input type="text" [(ngModel)]="empsal"><br>
+
+<button (click)="addEmployee()">Add Employee</button><br><br>
+{{employeeform.length}}
+
+<!-- Displaying employee information -->
+<div *ngFor="let employee of employeeform">
+    <p>EID: {{employee.emponeid}}</p>
+    <p>ENAME: {{employee.empname}}</p>
+    <p>ESALARY: {{employee.empsal}}</p>
+</div>
+

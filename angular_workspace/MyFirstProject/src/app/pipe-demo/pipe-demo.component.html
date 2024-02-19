@@ -1,0 +1,34 @@
+<p>pipe-demo works!</p>
+
+<h1>{{msg | uppercase}}</h1>
+<h1>{{msg | lowercase}}</h1>
+<h1>{{msg | titlecase}}</h1>
+
+<h1>{{amount}}</h1>
+<h3>{{amount | currency:'USD'}}</h3>
+<h3>{{amount | currency:'USD':false}}</h3>
+
+<h3>{{amount | currency:'INR'}}</h3>
+
+<h3>{{amount | percent:'.4'}}</h3>
+
+<h3>{{today}}</h3>
+<h3>{{today | date}}</h3>
+<h3>{{today | date: 'fullDate'}}</h3>
+<h3>{{today | date: 'shortDate'}}</h3>
+<h3>{{today | date: 'mediumDate'}}</h3>
+
+<h3>{{today | date:'HH:MM'}}</h3>
+<h3>{{today | date:'HH:MM:SS'}}</h3>
+
+<!--  CUSTOOM PIPE-->
+<h1>{{msg}}</h1>
+<h1>{{ msg |wordCount}}</h1>
+
+<!--POWER AND BASE-->
+<h3>{{base | powerBase:3}}</h3>
+
+<button (click)="show(10,30,40)">ClickMe</button>
+
+
+

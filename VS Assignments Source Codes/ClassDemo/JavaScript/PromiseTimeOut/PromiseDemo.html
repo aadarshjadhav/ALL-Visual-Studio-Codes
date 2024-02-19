@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let mypromise = new Promise(function(resolve,reject){
+            
+            if(true)
+            {
+                resolve()
+            }
+            else
+            {
+                reject()
+            }
+        })  
+
+        /* there is a connection between resolve() and the then function's success callback. 
+        In a Promise, the resolve function is used to fulfill the promise successfully. 
+        When you call resolve(), it signals that the asynchronous operation represented by the promise 
+        has completed successfully. The then method is a way to attach callbacks that will be executed 
+        when the promise is resolved. It takes two arguments: the first one is the success callback, 
+        and the second one (optional) is the error callback
+        */
+
+        /*Java script doesnt support function overloadinng, instead it uses Function Hoisting*/
+        /*
+        JavaScript uses a concept called "function hoisting," which means that function declarations are 
+        moved to the top of their containing scope during the compilation phase. However, if you have 
+        multiple functions with the same name, the last one defined will override any previous declarations.
+        */
+
+        mypromise.then(function(success)
+        {
+            document.write('Success')
+        },function(error)
+        {
+            document.write('Sommething is Wrong !!')
+        })
+
+    </script>
+</body>
+</html>

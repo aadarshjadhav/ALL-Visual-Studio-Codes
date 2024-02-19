@@ -1,0 +1,38 @@
+<p>Aadarsh is inisde nested home.component.html, put "app-home' taginside app.component.html</p>
+
+
+<!--Interpolation-->
+
+<h1>{{cityname}}</h1>
+<h1>{{getData()}}</h1>
+
+<!-- <img src="{{path}}" alt=""> -->
+
+<!--Property Binding-->
+
+<!-- <img [src]="path" alt="logo">
+<input type="text" [disabled]="isdisabled" value="welcome"> -->
+
+<!--Event Binding-->
+
+<!-- <button (click)="onMyClick()">Click Button</button>
+<h1>{{msg}}</h1> -->
+
+<!--HERE CLICK IS AN EVENT BINDINIG-->
+<button  (click)="show=!show">ShowClick</button><br><br>
+<h1>{{show}}</h1>
+
+<!--TWO WAY DATA BINDING-->
+Enter the Text:<input type="text" [(ngModel)]="data"><br><br>
+<h1>Data={{data}}</h1> 
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+       function DisplayEmployee(employees)
+        {
+            for(var emp of employees)
+            {
+                document.write(emp.eid+" "+ emp.empname+" "+ emp.salary)
+                document.write("<br>")
+            }
+        }
+
+        function CalculatePF(employees)
+        {
+            for(let i=0;i<employees.length;i++)
+            {
+                employees[i].salary=employees[i].salary*0.12
+            }
+
+            DisplayEmployee(employees)
+        }
+
+        var employees=[{eid:121,empname:'Aadarsh',salary:60000},
+        {eid:122,empname:'Sudharshan',salary:80000},
+        {eid:123,empname:'Yogesh',salary:70000}]
+
+        DisplayEmployee(employees)
+        document.write("<br>____________________________________________")
+
+        CalculatePF(employees)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee
+        {
+            empid
+            empname
+            birthyear
+
+            acceptDetails(empid, empname, birthyear)
+            {
+                this.empid=empid
+                this.empname=empname
+                this.birthyear=birthyear
+            }
+
+            findEmployeeAge()
+            {
+                var curr_date= new Date()
+                
+                let age = curr_date.getFullYear()-this.birthyear
+                console.log("Age: "+age)
+            }
+
+        }
+        
+
+        let emp=new Employee()
+        emp.acceptDetails(1001,"Aadarsh",1998)
+        emp.findEmployeeAge()
+        console.log(emp.empname+ " "+ emp.birthyear)
+
+
+    </script>
+</body>
+</html>

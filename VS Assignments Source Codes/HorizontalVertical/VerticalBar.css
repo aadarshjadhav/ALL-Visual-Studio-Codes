@@ -1,0 +1,24 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+lu{
+    list-style-type: none;
+    width: 100px;
+    
+    background-color: aqua;
+    
+}
+
+li a{
+    display: block;
+    /* color: aquamarine; */
+    text-decoration: aquamarine;
+}
+
+li a:hover{
+    background-color: rgb(250, 228, 140);
+    color:rgb(143, 6, 1);
+}

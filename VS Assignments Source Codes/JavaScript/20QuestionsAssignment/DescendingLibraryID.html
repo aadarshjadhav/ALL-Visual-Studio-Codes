@@ -1,0 +1,39 @@
+<!--14.	Write a JavaScript program to sort an array of JavaScript objects according to 
+libraryID in descending order.
+ var library = [ { title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1254 },
+ 	{ title: 'Three Mistakes', author: 'Steve Jobs', libraryID: 4264 }, 
+{ title: 'Ronaldo', author: 'Steve Jobs', libraryID: 3245 }]; 
+On above library array write a program to display only those books whose author is ‘Steve Jobs’
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var library = [ { title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1254 },
+         { title: 'Three Mistakes', author: 'Steve Jobs', libraryID: 4264 }, 
+    { title: 'Ronaldo', author: 'Steve Jobs', libraryID: 3245 }]; 
+    
+    //sort by labrary_id
+    
+    function sort(a,b){
+        return b.libraryID-a.libraryID
+    }
+    
+    // get info whose auther is steve
+    
+    for (let i=0; i<library.length; i++){
+        if(library[i].author=="Steve Jobs"){
+            document.write(library[i].title+" "+library[i].libraryID)
+            document.write("<br>")
+        }
+        
+    }
+    </script>
+</body>
+</html>

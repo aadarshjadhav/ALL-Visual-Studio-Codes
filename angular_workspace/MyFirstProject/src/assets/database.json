@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": "5",
+      "fname": "Appa",
+      "salary": 2000222
+    },
+    {
+      "id": "1",
+      "fname": "Aadarshh",
+      "salary": "212000"
+    },
+    {
+      "id": "3",
+      "fname": "Suraj",
+      "salary": "4000000"
+    }
+  ]
+}

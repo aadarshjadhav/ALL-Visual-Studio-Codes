@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="fun"></h1>
+    <script>
+
+        function myAddition(total,value,index,array)
+        {
+            return total+value
+        }
+
+        var num=[5,4,3,2,1]
+        let sum=num.reduce(myAddition)
+
+        document.getElementById('fun').innerHTML="Sum="+sum
+
+    </script>
+</body>
+</html>

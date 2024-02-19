@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cars=[{carid:101, carname:'Honda',carprice:100000}, 
+                {carid:102, carname:'Suzuki',carprice:50000},
+                {carid:103, carname:'Maruti',carprice:200000}]   
+        
+        for(var obj of cars)
+            document.write("<br>"+obj.carid+" "+obj.carname+" "+obj.carprice)
+
+        document.write("<br>_____________________________")
+
+        for(var obj of cars)
+        {
+            if(obj.carprice>90000)
+                   document.write("<br>" + obj.carid+ " "+ obj.carname+" "+obj.carprice)
+        }
+
+        var Employees=[{empid:1001,empname:"Aadarsh",empsalary:19000},
+                        {empid:1002,empname:"Sudharshan",empsalary:21000},
+                        {empid:1003,empname:"Yogesh Baba",empsalary:40000}]
+
+        for(var obj of Employees)
+        {
+            if(obj.empsalary<20000)
+            {
+                obj.empsalary=obj.empsalary+(obj.empsalary*0.1)
+            }
+        }
+        document.write("<br>____________Increasinig Salary by 10%_________________")
+        for(var obj of Employees)
+        {
+            document.write("<br>"+obj.empid+" "+obj.empname+" "+obj.empsalary)
+        }
+
+        
+
+    </script>
+</body>
+</html>

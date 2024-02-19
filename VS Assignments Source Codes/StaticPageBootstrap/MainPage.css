@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+ 
+}
+
+body{
+    height: auto;
+    
+    overflow-x: hidden;
+    background-image: url("abstract-textured-backgound.jpg");
+}
+
+.navbar {
+    position: fixed;
+    border: 3px solid rgb(157, 247, 179);
+    background-color: aquamarine;
+    overflow: hidden;
+    height: 60px;
+    
+}
+
+ul {
+    
+    list-style-type: none;
+    padding: 0;
+}
+
+li a{
+    
+    color: darkseagreen;
+  
+    padding: 1px;
+    font-size: 20px;    
+ 
+}
+
+li{
+    float: left;
+    margin-left: 2px; 
+}
+
+
+.sectionbox{
+    margin: 100px auto;
+    background-color: rgb(255,255,213);
+    /* border: 1px solid rgb(116, 95, 219); */
+    padding: 1px;
+    max-width: 25% ;
+    overflow-y: hidden;
+    
+}
+
+
+.textbox {
+
+    float: left;
+    width: 100%;
+    white-space: normal;
+    color: #000000;
+    font-size:20px;
+    font-weight:bold;
+    
+    
+  }
+  
+  .textcontainer{
+    float: left;
+    overflow: hidden;
+    /* border: 2px solid brown;  */
+    max-width:80% ;
+    margin-top: 10%;
+    margin-left: 4%;
+  }
+
+  .textboxsmall {
+
+    float: left;
+    width: 100%;
+    white-space: normal;
+    color: #000000;
+    font-size:14px;
+    font-weight:600;
+    
+  }
+  
+  .textcontainersmall{
+    float: left;
+    overflow: hidden;
+    /* border: 2px solid brown;  */
+    max-width:80% ;
+    margin-top: 1%;
+    margin-left: 4%;
+    overflow: hidden;
+    
+
+  }
+  
+  .textcontainer_in_imagecontainer{
+
+    float: left;
+    overflow: hidden;
+    /* border: 2px solid pink; */
+    margin-left: 0px;
+    padding-bottom: 5px;
+    
+
+    }
+
+  .textbox_in_imagecontainer{
+
+    float: left;
+    width: 100%;
+    white-space: normal;
+    color: #000000;
+    font-size:11px;
+    font-weight:600;
+    overflow: hidden;
+  }
+
+  .imagemaincontainer{
+    
+    /* border: 2px solid yellowgreen; */
+    padding: 1px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    margin-top:145px ;
+    margin-left: 3%;
+    margin-right: 3%;
+    
+  }
+
+  
+.imagecontainerleft{
+   
+    float: left;
+    margin-left: 1%;
+    /* margin-right: 10%; */
+    /* border: 2px solid rgb(165, 244, 244); */
+    padding-bottom: 0px;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    max-width: 50% auto;
+    overflow: hidden;
+}
+
+.leftbox{
+    float: left;
+    /* background-color: #ff0000; */
+    max-width: 49%;
+    height: auto;
+    /* border: 2px solid rgb(255, 234, 0); */
+    box-sizing: border-box;
+    padding-left: 1px;
+    overflow: hidden;
+    
+
+}
+
+.imagecontainerright{
+    float: right;
+    margin-right: 1%;
+    /* margin-left: 10%; */
+    /* border: 2px solid rgb(165, 244, 244); */
+    padding-bottom: 0px;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    max-width: 50% auto;
+    overflow: hidden;
+
+}
+
+.rightbox{
+    float: right;
+    /* background-color: #ff0000; */
+    max-width: 49%;
+    height: 300px;
+    /* border: 2px solid  rgb(255, 234, 0); */
+      
+    padding-right: 1px;
+    overflow: hidden;
+    height: auto;
+}
+
+.depth-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 8px solid #fff; /* Border color for the depth effect */
+    box-shadow: -5px 5px 10px -5px rgba(30, 255, 14, 0.5); /* Box shadow for the left and bottom borders */
+  }
+
+
+
+.sticky {
+    position: sticky;
+    top: 0;
+    /* Additional styles for sticky behavior */
+}
+
+/* .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: darkseagreen;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.imagecontainer:hover.overlay {
+    height: 10px;
+} */
+
+h1{
+   
+    color: blanchedalmond;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}

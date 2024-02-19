@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var cities=['Pune','Banglore', 'Goa',' Chennai', 'Nashik'];
+
+
+        document.write(cities + "<br>");
+        let cityname=cities.at(1);
+
+        document.write("<br>" + 'cityname:'+cityname);
+
+        cities.push('Mumbai')
+        document.write("<br>" + cities);
+
+
+        cities.unshift('Kolkata')
+        document.write("<br>" + cities);
+
+
+        cities.pop()
+        document.write("<br>"+cities)
+
+        cities.shift()
+        document.write("<br>"+cities)
+
+        cities.splice(1,0,'Nashik','Nagpur')
+
+        document.write("<br>"+cities)
+
+        var newcities= cities.slice(3)
+        document.write("<br>"+'newcities:'+newcities)
+
+        var allcities=cities.concat(newcities)
+        document.write("<br>"+'Allcities:'+allcities)
+
+        //Reverse Sort by overriding function(), 2 WAYS OF DOING THIS!!!
+
+        //First Way
+        // function sortCities(a,b){
+        //     return b.localeCompare(a); //Descending Order of alphabets
+
+        // }
+        // cities.sort(sortCities)
+
+        //Second Way
+        cities.sort(
+            function(a,b)
+            {
+                return b.localeCompare(a);
+            }
+        )
+
+        document.write("<br>"+cities)
+
+        // Sort function overrinding for number elements
+        var num=[10,1,5,3,9,8]
+
+        num.sort(
+            function(a,b) {
+                return b-a;
+                
+            }
+        )
+        document.write("<br>"+num)
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!---2.	Create array of object subject which contain [id, name , subtopic]and subtopic conatain[topicid,topicname]-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var subjects=[
+
+        {
+            id:1,
+            name:"Math",
+            subtopics:[
+
+                {topicid:101,topicname:'Algebra'},
+                {topicid:102,topicname:'Geometry'}
+            ]
+        },
+
+        {
+            id:2,
+            name:'Science',
+            subtopics:[
+                {topicid:201,topicname:'Bio'},
+                {topicid:202,topicname:'Phy'}
+            ]
+        }
+    ]
+
+    for(let i of subjects)
+    {
+        document.write(i.id)
+        document.write(i.name)
+
+        for (let subtopic of i.subtopics) {
+                document.write(subtopic.topicid + ", ")
+                document.write(subtopic.topicname + "<br>")
+        }
+    }
+        
+
+    </script>
+</body>
+</html>

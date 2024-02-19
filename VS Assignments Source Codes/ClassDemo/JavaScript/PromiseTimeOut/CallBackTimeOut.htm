@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="fun"></h1>
+
+    <div id="d1"></div>
+    <script>
+        // Function to be executed after 3 seconds using setTimeout
+        function display() {
+            document.getElementById('fun').innerHTML = "Hello Everyone.....";
+        }
+
+        // Calling the display function after a delay of 3000 milliseconds (3 seconds)
+        setTimeout(display, 3000);
+        
+        // Function to display current time and update it every 2 seconds using setInterval
+        function showTime() {
+            let dt = new Date();
+            let ans = dt.getHours() + ":" + dt.getMinutes();
+
+            // Displaying the current time inside the element with id 'd1'
+            document.getElementById('d1').innerHTML = ans;
+            
+        }
+
+        // Calling the showTime function initially
+        showTime();
+
+        // Updating the current time every 2 seconds using setInterval
+        setInterval(showTime, 5000);
+    </script>
+</body>
+</html>

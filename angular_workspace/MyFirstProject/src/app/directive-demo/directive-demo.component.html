@@ -1,0 +1,221 @@
+<p>directive-demo works!</p>
+
+<button (click)="show1=!show1">ShowClick DemoDirective</button><br><br>
+
+{{'show1 ='+show1}}
+
+<div *ngIf="show1" else elseBlock>Toggle Show by *ngIf</div>
+
+<!--HERE NG-TEMPLATE IS A PLACE HOLDER FOR ELSEBLOCK-->
+<ng-template #elseBlock><div>Text to Hide</div> </ng-template>
+
+Enter the Age=<input type="text" [(ngModel)]="age"><br>
+
+
+<div *ngIf="age>18 else ageCheck">  Person is Eligible for Drive</div>
+<ng-template #ageCheck><div>Person is not Eligible</div></ng-template>
+
+<input type="text" [(ngModel)]="color"><br><br>
+
+<!-----   Ng Switch Demo ------>
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'"><h1>This is Red</h1></div>
+    <div *ngSwitchCase="'blue'"><h1>This is Blue</h1></div>
+    <div *ngSwitchCase="'green'"><h1>This is Green</h1></div>
+
+    <div *ngSwitchDefault>Pick one</div>
+</div><br><br>
+
+<!--Assignments For Directives-->
+
+<!--Write a code to find the greastest number between two numbers-->
+
+<input type="text" [(ngModel)]="numberfirst"><br><br>
+<input type="text" [(ngModel)]="numbersecond"><br><br>
+<div *ngIf="numberfirst>numbersecond else numbCheck"><h1>{{numberfirst}} is Greastest</h1></div>
+<ng-template #numbCheck><div>{{numbersecond}} is Greastest</div></ng-template>
+
+<!--Write a code to find the greastest number between two numbers USING LALTEST IF AND FOR-->
+
+<h4>Greatest number Using latetst IF ELSE</h4>
+<input type="text" [(ngModel)]="numberfirst1"><br><br>
+<input type="text" [(ngModel)]="numbersecond1"><br><br>
+<input type="text" [(ngModel)]="numberthird1"><br><br>
+@if(numberfirst1>numbersecond1 && numberfirst1>numberthird1)
+{
+    <h4>Greatest number is {{numberfirst1}}</h4>
+}
+@else if(numbersecond1>numberfirst1 && numbersecond1>numberthird1)
+{
+    <h4>Greatest number is {{numbersecond1}}</h4>
+}
+@else{
+    <h4>Greatest number is {{numberthird1}}</h4>
+}
+
+<h5>FOR LOOP USINNG LATEST VERSION</h5><br><br>
+
+<table>
+    <tbody>
+        <tr>
+            <th>Names</th>
+        </tr>
+
+        @for(game of games; track game)
+        {
+            <tr>
+                <td>{{game.name}}</td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+
+
+
+<!--Wrtie a code to check number is Even or Odd-->
+
+<input type="text" [(ngModel)]="evenoddnum"><br><br>
+<div *ngIf="evenoddnum%2==0 else numOdd"><h1>{{evenoddnum}} is Even Number</h1></div>
+<ng-template #numOdd><div>{{evenoddnum}} is Odd Number</div></ng-template>
+
+<!--Write a code for is number is Divisible by 5 or Not-->
+<input type="text" [(ngModel)]="number_five"><br><br>
+<div *ngIf="number_five%5==0 else notDivbyFive"><h1>{{number_five}} is divisible by 5</h1><br><br></div>
+<ng-template #notDivbyFive><div>{{number_five}} is not divisible by 5</div></ng-template>
+
+<!--Switch To Display Number In Word Format -->
+<input type="text" [(ngModel)]="num_word"><br><br>
+<div [ngSwitch]="num_word">
+    <div *ngSwitchCase="'0'"><h1>Zero</h1></div>
+    <div *ngSwitchCase="'1'"><h1>One</h1></div>
+    <div *ngSwitchCase="'2'"><h1>Two</h1></div>
+    <div *ngSwitchCase="'3'"><h1>Three</h1></div>
+    <div *ngSwitchCase="'4'"><h1>Four</h1></div>
+    <div *ngSwitchCase="'5'"><h1>Five</h1></div>
+    <div *ngSwitchCase="'6'"><h1>Six</h1></div>
+
+    <div *ngSwitchDefault>Enter a Number</div>
+</div><br><br>
+
+<!--WEEKDAY FROM USER TO DISPLAY-->
+<input type="text" [(ngModel)]="week_day"><br><br>
+<div [ngSwitch]="week_day">
+    <div *ngSwitchCase="'1'"><h1>Monday</h1></div>
+    <div *ngSwitchCase="'2'"><h1>Tuesday</h1></div>
+    <div *ngSwitchCase="'3'"><h1>Wednessday</h1></div>
+    <div *ngSwitchCase="'4'"><h1>Thurday</h1></div>
+    <div *ngSwitchCase="'5'"><h1>Friday</h1></div>
+    <div *ngSwitchCase="'6'"><h1>Saturday</h1></div>
+    <div *ngSwitchCase="'7'"><h1>Sunday</h1></div>
+
+    <div *ngSwitchDefault>Enter the correct number</div>
+</div><br><br>
+
+<!-- <table>
+    <tbody>    
+        <tr>
+            <th>Eid</th>
+            <th>Eanme</th>
+            <th>Salary</th>
+            <th>Index</th>
+        </tr>
+
+        <tr *ngFor="let emp of employee; let i=index">
+            <td>{{emp.eid1}}</td>
+            <td>{{emp.ename1}}</td>
+            <td>{{emp.salary1}}</td>
+            <td>{{i}}</td>
+        </tr>
+        
+        <tr *ngIf="employee.length==0">
+            <td colspan="4">No Employees data is present</td>
+        </tr>
+    </tbody>
+
+</table> --> 
+
+<table style="border: 2px coral">
+    <tbody>
+        <tr>
+            <th>Movie Title</th>
+            <th>Movie Director</th>
+            <th>Ticket Price</th>
+            <th>Relsease Data</th>
+            <th>Index</th>
+        </tr>
+
+        <tr *ngFor="let movie of movies let i=index" >
+            <ng-container *ngIf="i % 2 !== 0">
+                <td>{{movie.title}}</td>
+                <td>{{movie.directorname}}</td>
+                <td>{{movie.ticketprice}}</td>
+                <td>{{movie.releasedate}}</td>
+                <td>{{i}}</td>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Student Marks</th>
+        </tr>
+        <ng-container *ngFor="let student of students">
+            <tr *ngIf="student.mark > 60">
+                <td>{{student.stud_id}}</td>
+                <td>{{student.stud_name}}</td>
+                <td>{{student.mark}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+
+
+
+<!--TWO WAY DATA BINDING-->
+<!-- <input type="text" [(ngModel)]="employ_name"><br><br>
+<h1>employ_name={{employ_name}}</h1>  -->
+
+<!--HERE CLICK IS AN EVENT BINDINIG-->
+<!-- <button  (click)="show=!show">ShowClick</button><br><br>
+<h1>{{show}}</h1> -->
+
+<input type="text" [(ngModel)]="employee_name"><br><br>
+<h4>{{employee_name}}</h4>
+
+
+<!---Employes with MR AND MS PIPE-->
+<table style="border: 2px solid;">
+    <tbody>
+        <tr>
+            <th>Eid</th>
+            <th>Eanme</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th>Birthdate</th>
+        </tr>
+
+        <ng-container *ngFor="let emp of employee2;">
+            <tr>
+                <td>{{emp.eid | uppercase}}</td>
+                <ng-container *ngIf="emp.gender=='Male'; else femaleBlock">
+                    <td>Mr.{{emp.ename}}</td>
+                </ng-container>
+                <ng-template #femaleBlock>
+                    <td>Miss.{{emp.ename}}</td>
+                </ng-template>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.salary | currency:'USD'}}</td>
+                <td>{{emp.birthdate | date:'fullDate'}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+
+
+
+

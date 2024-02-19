@@ -1,0 +1,38 @@
+
+
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+
+    border:  5px solid;  
+    width: 20%;
+    padding: 7%;
+    background-color:skyblue;
+}
+
+label{
+    display: inline-block;
+    width: 90px;
+    margin-bottom: 5%;
+}
+
+
+
+/* .LoginStyle1{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    padding: 10%;
+    border: solid teal;  
+    
+   
+
+   
+}
+
+.LoginContainer{
+    
+    text-align: center;
+    border-width: 500px;
+} */

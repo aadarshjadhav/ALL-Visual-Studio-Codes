@@ -1,0 +1,17 @@
+<!-- <p>emp-routs works!</p> -->
+
+<button (click)="SaveMe()">ClickMe</button><br><br>
+    
+<ul *ngIf="userdata">
+    
+    <!-- <li>{{ud.id}}  </li>
+    <li>{{ud.first_name}}  </li>
+    <li>{{ud.avatar}}  </li> -->
+    <li>{{userdata.id}}  </li>
+    <li>{{userdata.first_name}}  </li>
+    <li><img src={{userdata.avatar}}>  </li>
+</ul>
+    
+
+
+<button (click)="GoBack()" class="btn btn-warning">Return</button>

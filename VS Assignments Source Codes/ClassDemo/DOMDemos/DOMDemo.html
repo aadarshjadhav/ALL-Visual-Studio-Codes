@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="d1"></h1>
+    <h2 id="fun">Hello DOM</h2>
+    <h2>This is Head</h2>
+    <script>
+        document.getElementById('d1').innerHTML="This is head" // This is recommended instead on write()
+        document.write('Hi this is Alighty God') //write() reloads the DOM structure of html values
+
+        document.getElementById('fun').style.color='blue'
+        
+        console.log(document.title)
+
+        console.log(document.lastModified)
+        console.log(document.documentURI)
+        console.log(document.domain)
+        
+    </script>
+</body>
+</html>

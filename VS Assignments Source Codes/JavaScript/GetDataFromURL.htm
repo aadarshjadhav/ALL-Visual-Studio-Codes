@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="e1"></h1>
+    <!-- https://jsonplaceholder.typicode.com/todos      For all data-->
+    <script>
+    let myp=new Promise(function(resolve,reject){
+        let req=new XMLHttpRequest()
+        req.open('Get','https://jsonplaceholder.typicode.com/todos/1')// for only one id
+        req.onload=function(){
+            if(req.status==200)
+            {
+                resolve(req.response)
+            }
+            else
+            {
+                reject('Somthing is wrong...')
+            }
+        }
+
+        req.send()
+    })
+
+    myp.then(
+        function(success)
+        {
+                display(success)
+        },
+        function(error)
+        {
+                document.getElementById('e1').innerHTML='Somthing is Wrong'
+        }
+    )
+
+    function display(success)
+    {
+        let result=JSON.parse(success)
+
+        let data="<table border=1 width=50%><tr><th>USERID</th><th>ID</th><th>Title</th></tr>"
+            data+="<tr><td>"+result.userId+"</td>"+"<td>"+result.id+"</td>"+"<td>"+result.title+"</td></tr>"
+            data+="</table>"
+
+            document.getElementById('e1').innerHTML=data
+
+       // document.write(result.userId+" "+result.title+" "+result.id)
+
+            // for(let i=0;i<result.length;i++)
+            // {
+
+            //     console.log(result[i].userId+" "+result[i].id+" "+result[i].title)
+            // }
+
+    }
+    </script>
+</body>
+</html>

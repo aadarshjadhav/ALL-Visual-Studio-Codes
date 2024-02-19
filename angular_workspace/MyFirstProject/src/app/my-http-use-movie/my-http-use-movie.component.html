@@ -1,0 +1,19 @@
+<p>my-http-use-movie works!</p>
+
+<br><br>
+
+<table>
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+
+        <tr *ngFor="let mov of user">
+            <td>{{mov.id}}</td>
+            <td>{{mov.moviename}}</td>
+            <td>{{mov.ticketprice}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function findStud(students)
+        {
+            console.log('Inside findStud()')
+            for(let i=0;i<students.length;i++)
+            {
+                if(students[i].marks<60)
+                {
+                    document.write(students[i].sid+" "+students[i].sname+" "+students[i].marks )
+                }
+            }
+        }
+
+        var students=[{sid:1,sname:'Aadarsh',marks:89},
+        {sid:2,sname:'Shudarshan',marks:91},
+        {sid:3,sname:'Yogesh',marks:10}]
+
+        console.log(students)
+
+        findStud(students)
+
+    </script>
+</body>
+</html>

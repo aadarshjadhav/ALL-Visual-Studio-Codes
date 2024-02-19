@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function stringReverse(str)
+        {
+            let word=''
+            for(let i=0;i<str.length;i++)
+            {
+                word=str.charAt(i)+word
+            }
+            document.write(word)
+        }
+
+        function showVowels(str)
+        {   
+            for(let i=0;i<str.length;i++)
+            {
+                if(str.charAt(i)=="a"|| str.charAt(i)=='e'|| str.charAt(i)=='u'|| str.charAt(i)=='o'|| str.charAt(i)=='i')
+                    {
+                    document.write(str.charAt(i))
+                }
+            }
+        }
+        
+        var s=prompt('Ennter the String')
+        stringReverse(s)
+        document.write("<br>______________________________<br>")
+        showVowels(s)
+
+    </script>
+</body>
+</html>

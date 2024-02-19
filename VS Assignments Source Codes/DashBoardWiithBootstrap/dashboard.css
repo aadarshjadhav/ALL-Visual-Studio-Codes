@@ -1,0 +1,25 @@
+*{
+    padding:0;
+    margin: 0;
+    
+}
+
+.left-inventory-list{
+    padding: 0;
+    margin: 0;
+    height: 750px;
+    border: solid 2px greenyellow;
+
+}
+/*---------------HEADER--------------*/
+.header {
+    grid-area:header;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px 0px 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+

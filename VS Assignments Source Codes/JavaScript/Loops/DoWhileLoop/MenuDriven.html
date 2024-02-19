@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let choice;
+
+    // do {
+        // Display menu
+        document.write("Menu<br>");
+        document.write("1. Option 1<br>");
+        document.write("2. Option 2<br>");
+        document.write("3. Option 3<br>");
+        document.write("4. Exit<br>");
+
+        // Get user input
+        choice = prompt("Enter your choice (1-4):");
+
+        // Convert the user input to a number
+        choice = parseInt(choice);
+
+        switch (choice) {
+            case 1:
+                document.write("<p>You selected Option 1</p>");
+                break;
+            case 2:
+                document.write("<p>You selected Option 2</p>");
+                break;
+            case 3:
+                document.write("<p>You selected Option 3</p>");
+                break;
+            case 4:
+                document.write("<p>Exiting the program. Goodbye!</p>");
+                break;
+            default:
+                document.write("<p>Invalid choice. Please enter a number between 1 and 4.</p>");
+        }
+
+    // } while (choice !== 4); 
+    </script>
+</body>
+</html>

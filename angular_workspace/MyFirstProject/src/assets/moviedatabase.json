@@ -1,0 +1,20 @@
+{
+    "moviedata":[
+
+        {
+            "id":"1",
+            "moviename":"Harry Potter",
+            "ticketprice":200
+        },
+        {
+            "id":"2",
+            "moviename":"Mission Impossible",
+            "ticketprice":100
+        },
+        {
+            "id":"3",
+            "moviename":"Naruto",
+            "ticketprice":120
+        }
+    ]
+}

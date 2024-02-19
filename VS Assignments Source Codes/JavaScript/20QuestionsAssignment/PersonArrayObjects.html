@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var person1={
+            'name':'Aadarsh',
+            'age':'25',
+            'city':'New York'
+
+        };
+
+        var person2={
+            'name':'Suraj',
+            'age':'24',
+            'city':"Boston"
+
+        };
+
+        var personsArray=[person1,person2]
+
+
+        //Display person array
+
+        document.write("<strong>Person Array:</strong><br>")
+
+        for (var i = 0; i < personsArray.length; i++) {
+            document.write("<strong>Person " + (i + 1) + ":</strong><br>");
+            document.write("Name: " + personsArray[i].name + "<br>");
+            document.write("Age: " + personsArray[i].age + "<br>");
+            document.write("City: " + personsArray[i].city + "<br><br>");
+        }
+
+    </script>
+</body>
+</html>

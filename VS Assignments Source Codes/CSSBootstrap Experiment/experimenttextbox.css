@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.dummy{
+    
+    border: solid rgb(255, 7, 23) 3px;
+}
+
+.dummy-for-row{
+    border: solid 4px violet;
+    /* overflow:auto; */
+    padding: 0px;
+    margin: 0px;
+}
+
+.custom-text-box{
+
+    border: solid 3px brown;
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 600px;
+    overflow:auto; 
+    align-items: center;
+    margin:auto; /*Making margin auto makes the justify-content-center items aligned with equal margin within the row */
+
+}

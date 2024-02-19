@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    sid:<input type="text" id="sid"><br><br>
+    sname:<input type="tect" id="sname"><br><br>
+
+    <button onclick="localStorageII()"> Add</button><br>
+    <button onclick="show()">Show</button>
+
+    <script>
+
+        function localStorageII()
+        {
+            var uid=document.getElementById('sid').value
+            localStorage.setItem("userid",uid)
+
+            var uname=document.getElementById('sname').value
+            localStorage.setItem("username",uname)
+
+            alert("added successfully!!!")
+        }
+
+        function show()
+        {
+            var uid=localStorage.getItem("userid")
+            var uname=localStorage.getItem("username")
+            document.write(uid)
+            document.write(uname)
+        }
+
+    </script>
+    
+</body>
+</html>

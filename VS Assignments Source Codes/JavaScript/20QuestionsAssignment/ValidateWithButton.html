@@ -1,0 +1,58 @@
+<!--8.	Write a javascript code to accept data in 2 textboxes and on click event validate following
+•	Check whether text boxes are empty
+•	If not check for numeric values
+•	If numeric using alert display addition
+•	If not numeric alert user and set focus on respective textbox
+-->>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <label for="textbox1">Textbox 1:</label>
+  <input type="text" id="textbox1">
+
+  <br>
+
+  <label for="textbox2">Textbox 2:</label>
+  <input type="text" id="textbox2">
+
+  <br>
+
+  <button onclick="validateAndAdd()">Validate and Add</button>
+
+  <script>
+    function validateAndAdd() {
+      // Get values from textboxes
+      var value1 = document.getElementById("textbox1").value.trim();
+      var value2 = document.getElementById("textbox2").value.trim();
+
+      // Check if any textbox is empty
+      if (value1 === "" || value2 === "") {
+        alert("Please enter values in both textboxes");
+      } else {
+        // Check if both values are numeric
+        if (!isNaN(value1) && !isNaN(value2)) {
+          // If numeric, calculate and display the addition
+          var result = parseFloat(value1) + parseFloat(value2);
+          alert("The addition is: " + result);
+        } else {
+          // If not numeric, alert user and set focus on the respective textbox
+          if (isNaN(value1)) {
+            alert("Textbox 1 is not a numeric value");
+            document.getElementById("textbox1").focus();
+          } else {
+            alert("Textbox 2 is not a numeric value");
+            document.getElementById("textbox2").focus();
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+        <script>
+            let user={phonen:'',
+            
+            get phonenumber()
+            {
+                return this.phonen;
+            },
+
+            set phonenumber(value)
+            {
+                let temp=value.split('');
+                
+                if(temp.length!=10)
+                    console.log("Invalid nmber of digits"+temp.length)
+                else
+                {
+                    this.phonen=value.split("")
+
+                }
+                
+            }
+        }
+
+        user.phonenumber=prompt("Enter the phone number:")
+        alert(user.phonen)
+        </script>
+    
+</body>
+</html>

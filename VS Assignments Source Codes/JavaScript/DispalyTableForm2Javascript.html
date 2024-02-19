@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="e1"></h1>
+     <!-- https://jsonplaceholder.typicode.com/todos      this link contains all the data-->
+
+    <script>
+
+        let myq= new Promise(function(resolve,reject){
+
+            let req= new XMLHttpRequest()
+            req.open('Get','https://reqres.in/api/users?page=2') // only for one id
+            req.onload=function(){
+                if(req.status==200)
+                {
+                    resolve(req.response)
+                }
+                else{
+                    reject('Something is wrong....')
+                }
+            }
+
+            req.send()
+        })
+
+        myq.then(
+            function(success)
+            {
+                display(success)
+            },
+            function(error)
+            {
+                document.getElementById('e1').innerHTML='Something is Wrong'
+            }
+        )
+
+        function display(success)
+        {
+            let result = JSON.parse(success);
+
+            let data = "<table border=1 width=50%><tr><th>USERID</th><th>ID</th><th>Title</th></tr>";
+
+                for (let i = 0; i < result.data.length; i++) {
+                data += "<tr><td>" + result.data[i].id + "</td>" +
+                        "<td>" + result.data[i].email + "</td>" +
+                        "<td>" + result.data[i].first_name + "</td>" +
+                        "<td>" + result.data[i].last_name + "</td></tr>";
+            }
+
+            data += "</table>";
+            document.write(data);
+        }
+
+    </script>
+</body>
+</html>

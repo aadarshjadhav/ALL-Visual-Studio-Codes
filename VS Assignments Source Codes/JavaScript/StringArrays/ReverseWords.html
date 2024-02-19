@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str='This is my India, I love my India'
+        var str_array=str.split(' ')
+
+        function strReverse(str_single)
+        {
+            let word=' '
+            for(let i=0;i<str_single.length;i++)
+            {
+                word=str_single.charAt(i)+word
+
+            }
+
+            document.write(" "+word)
+        }
+
+        for(let i of str_array)
+        {   
+            strReverse(i)
+            
+        }
+    </script>
+</body>
+</html>
