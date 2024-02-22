@@ -16,11 +16,15 @@ import { MyHttpUse3Component } from './my-http-use3/my-http-use3.component';
 import { MyHttpUseMovieComponent } from './my-http-use-movie/my-http-use-movie.component';
 import { LoginComponent } from './login/login.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { MaterialDemoComponent } from './material-demo/material-demo.component';
+import { FormWithMaterialDemoComponent } from './form-with-material-demo/form-with-material-demo.component';
+import { RecipeMenuComponent } from './recipe-menu/recipe-menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,DirectiveDemoComponent,AttributeDemoComponent,PipeDemoComponent,FormDemoComponent,ParentComponent,ChildComponent, MyFirstServiceComponent,MyHttpUseComponent,MyHttpUse2Component,RouterModule, EmpRoutsComponent,PageNotFoundComponent,EmpRoutsComponent,MyHttpUse3Component,MyHttpUseMovieComponent, LoginComponent,TemplateFormComponent],
+  imports: [RouterOutlet,HomeComponent,DirectiveDemoComponent,AttributeDemoComponent,PipeDemoComponent,FormDemoComponent,ParentComponent,ChildComponent, MyFirstServiceComponent,MyHttpUseComponent,MyHttpUse2Component,RouterModule, EmpRoutsComponent,PageNotFoundComponent,EmpRoutsComponent,MyHttpUse3Component,MyHttpUseMovieComponent, LoginComponent,TemplateFormComponent,ReactiveFormComponent,MaterialDemoComponent,FormWithMaterialDemoComponent,RecipeMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

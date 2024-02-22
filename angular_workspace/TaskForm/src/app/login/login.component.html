@@ -1,0 +1,23 @@
+<p>login workssdasdaas!</p>
+
+<form>
+
+    <div>
+        <label>UserName</label>
+        <input type="text" name="username" [(ngModel)]="username" [disabled]="isdisabled">
+        
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input type="password" name="password" [(ngModel)]="password" [disabled]="isdisabled">
+    </div>
+
+
+    <div>
+        <button type="button" (click)="login()" [disabled]="isdisabled">Login</button>
+        <button type="button" (click)="getDetails()">getDetails</button>
+    </div>
+
+</form>
+

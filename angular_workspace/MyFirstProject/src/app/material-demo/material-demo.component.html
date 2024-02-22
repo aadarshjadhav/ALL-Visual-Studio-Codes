@@ -1,0 +1,29 @@
+<p>material-demo works!</p>
+
+
+<mat-slide-toggle>Slide me!</mat-slide-toggle>
+<br><br>
+
+
+<mat-slider>
+    <input matSliderThumb>
+</mat-slider> 
+<br><br>    
+
+<mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<br><br>
+<br><br>
+
+<mat-toolbar>
+    <button mat-button >Menu</button>
+    <button mat-button >Login</button>
+    <button mat-button >Sign-up</button>
+    <button mat-button >About Us</button>
+</mat-toolbar>
+

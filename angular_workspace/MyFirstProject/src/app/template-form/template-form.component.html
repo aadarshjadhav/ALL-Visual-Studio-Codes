@@ -1,10 +1,10 @@
 <p>template-form works!</p>
 
-<!-- <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && OnSubmit() novalidate">
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && OnSubmit()" novalidate>
     <div>
         <label>FullName</label>
         <input type="text" class="form-control" name="fullName" [(ngModel)]="form.fullName" 
-        required #fullName="ngModel" [ngClass]="{'is-invalid:f.submitted && fullName.errors'}">
+        required #fullName="ngModel" [ngClass]="{'is-invalid':f.submitted && fullName.errors}">
         @if(f.submitted && fullName.errors)
         {
             @if(fullName.errors['required'])
@@ -18,11 +18,11 @@
         <label>UserName</label>
         <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
         minlength="6" maxlength="20" #username="ngModel" 
-        [ngClass]="{'is-invalid':f.submitted && username.erros}">
+        [ngClass]="{'is-invalid':f.submitted && username.errors}">
 
         @if(f.submitted && username.errors)
         {
-            @if(username.erros['required'])
+            @if(username.errors['required'])
             {
                 <div>UserName is Required</div>
             }
@@ -59,6 +59,32 @@
         <label>Password</label>
         <input type="password" class="form-control" name="password" [(ngModel)]="form.password" 
         required #password="ngModel" minlength="8" [ngClass]="{'is-invalid':f.submitted && password.errors}">
-        
-    </div> -->
+        @if(f.submitted && password.errors)
+        {
+            @if(password.errors['required'])
+            {
+                <div>password</div>
+            }
+            @if(password.errors['minlength'])
+            {
+                <div>Min 8 characters rerqiured</div>
+            }
+        }
+    </div>
 
+    <div>
+        <input type="checkbox" class="form-control" name="acceptTerms" [(ngModel)]="form.acceptTerms"
+        class="form-check-input" required #acceptTerms="ngModel"
+        [ngClass]="{'is-invalid':f.submitted && acceptTerms.errors}">
+        <label>I Have read and agree to Terms</label>
+        @if(f.submitted && acceptTerms.errors)
+        {
+            <div>AcceptTerms is required</div>
+        }
+    </div>
+
+    <div>
+        <button type="submit"  class="btn btn-primary">Register</button>
+        <button type="button" class="btn btn-warning float-right" (click)="OnReset(f)" >Reset</button>
+    </div>
+</form>

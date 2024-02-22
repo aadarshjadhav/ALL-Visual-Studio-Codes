@@ -1,0 +1,39 @@
+{
+  "product_data": [
+    {
+      "id": "1",
+      "name": "ASUS TUF Gaming F15",
+      "price": 5000,
+      "description": "AI Powered Gaming Intel Core i5 11th Gen 11260H",
+      "img": "https://rukminim2.flixcart.com/image/832/832/xif0q/computer/v/y/z/-original-imagtucnqsqpbvk6.jpeg?q=70&crop=false"
+    },
+    {
+      "id": "2",
+      "name": "ASUS TUF Gaming F15",
+      "price": 5000,
+      "description": "AI Powered Gaming Intel Core i5 11th Gen 11260H",
+      "img": "https://rukminim2.flixcart.com/image/832/832/xif0q/computer/v/y/z/-original-imagtucnqsqpbvk6.jpeg?q=70&crop=false"
+    },
+    {
+      "id": "3",
+      "name": "ASUS TUF Gaming F15",
+      "price": 5000,
+      "description": "AI Powered Gaming Intel Core i5 11th Gen 11260H",
+      "img": "https://rukminim2.flixcart.com/image/832/832/xif0q/computer/v/y/z/-original-imagtucnqsqpbvk6.jpeg?q=70&crop=false"
+    },
+    {
+      "id": "4",
+      "name": "ASUS TUF Gaming F15",
+      "price": 5000,
+      "description": "AI Powered Gaming Intel Core i5 11th Gen 11260H",
+      "img": "https://rukminim2.flixcart.com/image/832/832/xif0q/computer/v/y/z/-original-imagtucnqsqpbvk6.jpeg?q=70&crop=false"
+    },
+    {
+      "id": "5",
+      "name": "ASUS TUF Gaming F15",
+      "price": 5000,
+      "description": "AI Powered Gaming Intel Core i5 11th Gen 11260H",
+      "img": "https://rukminim2.flixcart.com/image/832/832/xif0q/computer/v/y/z/-original-imagtucnqsqpbvk6.jpeg?q=70&crop=false"
+    }
+  ]
+}

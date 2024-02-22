@@ -1,0 +1,18 @@
+{
+  "Recipes": [
+    {
+      "id": "1",
+      "name": "Iddli Sambar",
+      "time": "30 minutes",
+      "details": "Recipe 1 details",
+      "img": "https://rasoirani.com/wp-content/uploads/2020/10/south-indian-style-idli-sambhar-recipe.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Dosa",
+      "time": "1 minutes",
+      "details": "Recipe 2 details",
+      "img": "https://www.thespruceeats.com/thmb/9cgBTZ10Zu8DzfWxl2tHxoNn_Q4=/6240x4160/filters:fill(auto,1)/how-to-make-dosa-1957716-Hero-5b59e84346e0fb0071e637c5.jpg"
+    }
+  ]
+}

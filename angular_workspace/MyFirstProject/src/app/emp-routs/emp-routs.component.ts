@@ -60,7 +60,7 @@ export class EmpRoutsComponent implements OnInit {
   }
     
   GoBack() {
-    this.r.navigate(['Home'])
+    this.r.navigate(['/Home'])
   }
   
 }

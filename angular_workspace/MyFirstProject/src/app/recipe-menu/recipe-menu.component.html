@@ -1,0 +1,53 @@
+<!-- <p>recipe-menu works!</p> -->
+
+
+<div>
+    <h2>Welcome to Recipe Book</h2>
+    
+    <div *ngIf="selectedItem === null; else itemDetails">
+      <select class="form-select" #itemName (change)="selectItem(itemName.value)">
+        <option value="" selected>Select an item...</option>
+        <option *ngFor="let recipe of Recipes" [value]="recipe.name">{{ recipe.name }}</option>
+      </select>
+    </div>
+    
+    <ng-template #itemDetails>
+      <h3>{{ selectedItem.name }}</h3>
+      <p>Prep Time: {{ selectedItem.time }}</p>
+      <p>Details: {{ selectedItem.details }}</p>
+      <p><img src="{{ selectedItem.img }}" width="300px" height="400px" alt="image"></p>
+      <button class="btn btn-danger" (click)="clearSelection()">Back to selection</button>
+    </ng-template>
+  </div>
+
+
+
+  <br><br>
+  
+
+
+
+  <button class="btn btn-primary" (click)="toggleForm()">Add New Recipe</button>
+
+ 
+  <form *ngIf="showForm" (submit)="addRecipe()" class="my-4">
+
+    
+    <div class="mb-3">   
+      <label for="name" class="form-label">Recipe Name</label>
+      <input type="text" name="name" [(ngModel)]="newRecipe.name" class="form-control" id="name" placeholder="Recipe Name" required>
+    </div>
+    <div class="mb-3">
+      <label for="time" class="form-label">Preparation Time</label>
+      <input type="text" name="time" [(ngModel)]="newRecipe.time" class="form-control" id="time" placeholder="Preparation Time" required>
+    </div>
+    <div class="mb-3">
+      <label for="details" class="form-label">Recipe Details</label>
+      <textarea name="details" [(ngModel)]="newRecipe.details" class="form-control" id="details" rows="3" placeholder="Recipe Details" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="img" class="form-label">Image URL</label>
+      <input type="text" name="img" [(ngModel)]="newRecipe.img" class="form-control" id="img" placeholder="Image URL" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Recipe</button>
+  </form>
