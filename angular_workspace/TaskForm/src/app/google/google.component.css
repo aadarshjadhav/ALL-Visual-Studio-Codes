@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+.topsearch-base{
+
+    border: solid 2px aqua;
+    align-items: center;
+    
+
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar-custom{
+
+    border: 3px solid coral;
+    border-radius: 20px ;
+    width: 400px;
+    padding: 10px;
+    /* margin-bottom: 20px;
+    margin-top: 0px;
+    margin-left: 20px; */
+    margin: 30px; ;    
+
+}
+
+img{
+    height: 40px;
+    width: 130px;
+    margin-top: 40px;
+}
+
+li{
+    padding: 10px;
+    border-bottom: 2px solid aquamarine;
+}
+
+li p{
+    margin: 10px;
+}

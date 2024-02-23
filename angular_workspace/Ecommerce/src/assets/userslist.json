@@ -1,5 +1,20 @@
 {
   "userlist_data": [
-   
+    {
+      "id": "bea8",
+      "fullname": "Aadarsh Jadhav",
+      "username": "aadarshjadhahv",
+      "email": "aadarshjadhahv@gmail.com",
+      "password": "qwerty1234",
+      "isadmin": true
+    },
+    {
+      "id": "39df",
+      "fullname": "Sudharshan Narhe",
+      "username": "Sudharshan12312",
+      "email": "Sudharshan@gmail.com",
+      "password": "Sudharshan",
+      "isadmin": false
+    }
   ]
 }

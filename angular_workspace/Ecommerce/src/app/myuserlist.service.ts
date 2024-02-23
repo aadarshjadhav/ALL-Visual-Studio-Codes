@@ -22,13 +22,18 @@ export class MyuserlistService {
 
     let userdat={id:userdata.id,fullname:userdata.fullname,
       username:userdata.username,email:userdata.email,
-      password:userdata.password,accept_terms:userdata.accept_terms}
+      password:userdata.password,accept_terms:userdata.accept_terms, isadmin:false}
     
     return this.myhttpclient.post<any>(this.url,userdat).pipe(
       catchError(this.errorHandler)
     )
 
   }
+
+  // checkData(userdata:any)
+  // {
+
+  // }
 
   errorHandler(error:any)
   {

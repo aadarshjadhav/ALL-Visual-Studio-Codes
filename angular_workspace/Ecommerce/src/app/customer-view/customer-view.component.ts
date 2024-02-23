@@ -3,6 +3,7 @@ import { ProductsService } from '../products.service';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-view',
@@ -17,7 +18,7 @@ export class CustomerViewComponent implements OnInit{
 
   products_list:any
 
-  constructor(public myclient:ProductsService)
+  constructor(public myclient:ProductsService, private router:Router)
   {
 
   }
@@ -32,6 +33,10 @@ export class CustomerViewComponent implements OnInit{
   getAllProducts()
   {
     this.myclient.getData().subscribe(result=>{this.products_list=result})
+  }
+
+  navigateToBack() {
+    this.router.navigate(['/Login']); // Navigate to the home page or any other desired route
   }
 
 }

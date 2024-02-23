@@ -19,29 +19,36 @@ export class LoginComponent {
 
 
   // }
-  isdisabled:boolean=true;
-  username:string=""
-  password:string=""
+  // isdisabled:boolean=true;
+  // username:string=""
+  // password:string=""
+  // userdescription:string=""
+  // isdisableddata:boolean=true
+  // copydata:string=""
   
-  login()
-  {
-    if(this.username=="yash" && this.password=="gupta")
-    {
-      alert("login succesfull")
-    }
-    else{
+  // login()
+  // {
+  //   if(this.username=="yash" && this.password=="gupta")
+  //   {
+  //     alert("login succesfull")
+  //   }
+  //   else{
 
-      this.isdisabled=true;
-      this.username="";
-      this.password="";
-      alert("login not successfull......")
-    }
-  }
+  //     this.isdisabled=true;
+  //     this.username="";
+  //     this.password="";
+  //     alert("login not successfull......")
+  //   }
+  // }
 
 
-  getDetails()
-  {
-    this.isdisabled=false;
-  }
+  // getDetails()
+  // {
+  //   this.isdisabled=false;
+  // }
+
+  // copyData(){
+  //   this.copydata=this.userdescription
+  // }
 
 }
