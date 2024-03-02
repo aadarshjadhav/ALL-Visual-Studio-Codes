@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.c-search-bar {
+    border: solid 2px rgb(255, 255, 255);
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 40px;
+    max-height: 40px;
+    float: right; /* Align to the right */
+    margin: 10px;
+}
+
+.btn-success{
+    padding: 7px;
+}
+

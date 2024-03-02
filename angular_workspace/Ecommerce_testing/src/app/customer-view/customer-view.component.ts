@@ -15,28 +15,59 @@ import { Route, Router } from '@angular/router';
 })
 export class CustomerViewComponent implements OnInit{
 
+ 
+  products_list: any = [];
+  productChunks: any[][] = [];
 
-  products_list:any
-
-  constructor(public myclient:ProductsService, private router:Router)
-  {
-
-  }
+  constructor(public myclient: ProductsService, private router: Router) { }
 
   ngOnInit(): void {
-    
-  
-    this.getAllProducts()
-  
+    this.getAllProducts();
   }
 
-  getAllProducts()
-  {
-    this.myclient.getData().subscribe(result=>{this.products_list=result})
+  // getAllProducts()
+  // {
+  //   this.myclient.getData().subscribe(result=>{this.products_list=result})
+  // }
+
+  //typeof user !== 'undefined'
+
+  getAllProducts() {
+    this.myclient.getData().subscribe(
+      result => {
+        if (typeof result !== 'undefined') {
+          this.products_list = result;
+          this.productChunks = this.chunkArray(this.products_list, 4);
+          console.log('Product Chunks:', this.productChunks);
+        } else {
+          console.error('Error: No products returned from server.');
+        }
+      },
+      (error) => {
+        console.error('Error fetching products:', error);
+      }
+    );
+  }
+
+  chunkArray(myArray: any[], chunkSize: number) {
+    if (!myArray) {
+      console.error('Input array is undefined or null');
+      return [];
+    }
+    
+    const arrayLength = myArray.length;
+    const tempArray: any[][] = [];
+    
+    for (let index = 0; index < arrayLength; index += chunkSize) {
+        const myChunk = myArray.slice(index, index + chunkSize);
+        tempArray.push(myChunk);
+    }
+
+    return tempArray;
   }
 
   navigateToBack() {
-    this.router.navigate(['/Login']); // Navigate to the home page or any other desired route
+    this.router.navigate(['/Login']);
   }
 
 }
