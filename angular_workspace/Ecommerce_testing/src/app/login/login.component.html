@@ -1,0 +1,47 @@
+<p>login works!</p>
+
+<form [formGroup]="userform" (ngSubmit)="OnSubmit()">
+
+    <div>
+        <label>UserName</label>
+        <input type="text" formControlName="username" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f['username'].errors}">
+        @if(submitted && f['username'].errors)
+        {
+            @if(f['username'].errors['required'])
+            {
+                <div>UserName Must be Required</div>
+            }
+            @if(f['username'].errors['minlength'])
+            {
+                <div>Min 6 char required for Username</div>
+            }
+        }
+    </div>
+
+
+    <div>
+        <label>Password</label>
+        <input type="password" formControlName="password" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f['password'].errors}">
+        @if(submitted && f['password'].errors)
+        {
+            @if(f['password'].errors['required'])
+            {
+                <div>Password Must be Required</div>
+            }
+            @if(f['password'].errors['minlength'])
+            {
+                <div>Min 6 char required for password</div>
+            }
+        }
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-success">Submit</button>&nbsp;&nbsp;
+        <button type="singup" class="btn btn-success" (click)=navigateToSignUp()>SignUp</button>
+    </div>
+
+</form>
+
+

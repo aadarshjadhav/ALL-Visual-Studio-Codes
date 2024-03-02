@@ -1,0 +1,25 @@
+<p>customer-view works!</p>
+
+<table>
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <th>Images</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+
+        <tr *ngFor="let prod of products_list">
+            <td>{{prod.id}}</td>
+            <td><img src={{prod.img}} alt="img"></td>
+            <td>{{prod.name}}</td>
+            <td>{{prod.price}}</td>
+            <td>{{prod.description}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <button type="back" class="btn btn-success" (click)="navigateToBack()">Back</button>
+</div>
