@@ -66,12 +66,12 @@ export class LoginComponent implements OnInit {
 
       // Find the user in the usersdata array based on the entered username
       const user = this.usersdata.find((userdata_single: any) => userdata_single.username === enteredUsername);
-
-      if (user.username ===enteredUsername && user.password === enteredPassword) {
+      console.log("before if conndition")
+      if  (typeof user !== 'undefined' && user.username ===enteredUsername && user.password === enteredPassword ) {
         // Authentication successful
         // console.log('Login successful');
         // You can perform additional actions like redirecting to another page
-
+        console.log("inside if conndition")
         if(user.isadmin===false)
         {
           this.router.navigate(['/CustomerView']);
@@ -81,13 +81,15 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/AdminView']);
         }
         
-
-      } else {
+        console.log("exiting if conndition")
+      } 
+      else{
         // Authentication failed
         // console.log('Invalid username or password');
         // GO TO SignUP
 
-          this.router.navigate(['/SignUp']);
+          console.log("inside else")
+          this.router.navigate(['/SignUp'])
         
       }
 

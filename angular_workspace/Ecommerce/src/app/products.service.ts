@@ -33,6 +33,13 @@ export class ProductsService {
 
   }
 
+  public updateProd(id:any,prod:any):Observable<any>{
+
+    return this.myhttpclient.put<any>(`${this.url}/${id}`,prod).pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
   errorHandler(error:any)
   {
     let errorMessage=""

@@ -18,6 +18,7 @@ export class AdminViewComponent {
 
   prodform!:FormGroup
   products_list:any
+  isupdate!:boolean
   constructor(public myclient:ProductsService,public fb:FormBuilder)
   {
 
@@ -72,16 +73,38 @@ export class AdminViewComponent {
     }
   }
 
+  editProd(prod:any)
+  {
+    this.isupdate=true
+
+    this.prodform.setValue({
+
+      id:prod.id,
+      img:prod.img,
+      name:prod.name,
+      price:prod.price,
+      description:prod.description
+
+    })
+  }
+
   saveDate_ts()
   {
     let prod=this.prodform.value
     
-    console.log(prod)
-
-    this.myclient.saveData(prod).subscribe(rersult=>{})
-    
+    // console.log(prod)
+    if(!this.isupdate)
+    {
+      this.myclient.saveData(prod).subscribe(rersult=>{})
+    }
+    else
+    {
+      let id =parseInt(this.prodform.value.id)
+      this.myclient.updateProd(id,prod).subscribe(result=>{})
+    }
 
     this.getAllEmp()
+    this.isupdate=false
 
     this.prodform.reset()
   }

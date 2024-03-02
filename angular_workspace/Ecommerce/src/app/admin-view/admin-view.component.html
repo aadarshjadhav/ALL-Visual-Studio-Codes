@@ -18,6 +18,7 @@
             <td>{{prod.price}}</td>
             <td>{{prod.description}}</td>
             <td>
+                <input type="button"  value="Edit" class="btn btn-warning" (click)="editProd(prod)"> &nbsp;&nbsp;
                 <input type="button"  value="Delete" class="btn btn-danger" (click)="deleteProd(prod.id)">
             </td>
             

@@ -1,0 +1,29 @@
+<p>simple-employee works!</p>
+
+<table>
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr *ngFor="let emp of emp_array" >
+            <td>{{emp.emp_id}}</td>
+            <td>{{emp.employee_name}}</td>
+            <td>{{emp.employee_name}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngFor="let num of countArray">
+    <ng-container *ngIf="num % 2 == 0; then evenBlock; else oddBlock"></ng-container>
+    <ng-template #evenBlock>
+      <p style="color: blue;">{{ num }}</p>
+    </ng-template>
+    <ng-template #oddBlock>
+      <p style="color: brown;">{{ num }}</p>
+    </ng-template>
+  </div>
+  
+
+

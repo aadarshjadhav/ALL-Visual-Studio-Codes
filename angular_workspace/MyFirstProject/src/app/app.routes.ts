@@ -14,6 +14,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { FormWithMaterialDemoComponent } from './form-with-material-demo/form-with-material-demo.component';
 import { RecipeMenuComponent } from './recipe-menu/recipe-menu.component';
+import { SimpleEmployeeComponent } from './simple-employee/simple-employee.component';
 
 export const routes: Routes = [
 
@@ -31,6 +32,7 @@ export const routes: Routes = [
     {path:'MaterialDemo',component:MaterialDemoComponent},
     {path:'FormWithMaterialDemo',component:FormWithMaterialDemoComponent},
     {path:'RecipeMenu',component:RecipeMenuComponent},
+    {path:'SimpleEmployee',component:SimpleEmployeeComponent},
     {path:'',redirectTo:'Home',pathMatch:'full'}, //When yoyu open the webpage, by default the Home is selected
     {path:'**',component:PageNotFoundComponent}, 
   

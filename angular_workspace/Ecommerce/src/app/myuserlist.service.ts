@@ -8,7 +8,7 @@ import { Observable, ObservedValueOf, catchError,throwError } from 'rxjs';
 })
 export class MyuserlistService {
 
-  url="http://localhost:3000/userlist_data"
+  url="http://localhost:3001/userlist_data"
   constructor(public myhttpclient:HttpClient) { }
 
   

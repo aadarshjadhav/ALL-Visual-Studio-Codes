@@ -32,7 +32,8 @@ function scopeChecker()
 }
 
 inside_fun_number_var=20                //Variables declared with var have function scope (or global scope if declared outside any function).
-inside_fun_number_const=18              //They are not block-scoped, meaning they are accessible throughout the entire function in which they are declared, regardless of any block (like if or for).
+                                        //They are not block-scoped, meaning they are accessible throughout the entire function in which they are declared, regardless of any block (like if or for).s
+inside_fun_number_const=18              
                                         //Variables declared with var are also subject to hoisting, where the declaration is moved to the top of the function or global context during compilation.
 
 /*

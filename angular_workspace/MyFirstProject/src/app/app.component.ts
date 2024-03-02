@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChange } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
@@ -20,11 +20,12 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { FormWithMaterialDemoComponent } from './form-with-material-demo/form-with-material-demo.component';
 import { RecipeMenuComponent } from './recipe-menu/recipe-menu.component';
+import { SimpleEmployeeComponent } from './simple-employee/simple-employee.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,DirectiveDemoComponent,AttributeDemoComponent,PipeDemoComponent,FormDemoComponent,ParentComponent,ChildComponent, MyFirstServiceComponent,MyHttpUseComponent,MyHttpUse2Component,RouterModule, EmpRoutsComponent,PageNotFoundComponent,EmpRoutsComponent,MyHttpUse3Component,MyHttpUseMovieComponent, LoginComponent,TemplateFormComponent,ReactiveFormComponent,MaterialDemoComponent,FormWithMaterialDemoComponent,RecipeMenuComponent],
+  imports: [RouterOutlet,HomeComponent,DirectiveDemoComponent,AttributeDemoComponent,PipeDemoComponent,FormDemoComponent,ParentComponent,ChildComponent, MyFirstServiceComponent,MyHttpUseComponent,MyHttpUse2Component,RouterModule, EmpRoutsComponent,PageNotFoundComponent,EmpRoutsComponent,MyHttpUse3Component,MyHttpUseMovieComponent, LoginComponent,TemplateFormComponent,ReactiveFormComponent,MaterialDemoComponent,FormWithMaterialDemoComponent,RecipeMenuComponent,SimpleEmployeeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
