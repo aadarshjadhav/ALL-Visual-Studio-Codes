@@ -60,7 +60,7 @@
   min-width: 208px;
   max-width: 260px;
   min-height: 474px;
-  max-height: 580px;
+  max-height: 474px;
   overflow:auto; 
   align-items: start;
 
@@ -93,4 +93,13 @@
 .btn-primary:hover {
   background-color: #5a9dd8; /* Slightly darker shade of blue on hover */
   border-color: #326898; /* Slightly darker shade of blue for border on hover */
+}
+
+.card-img-top{
+
+  max-width: 256px;
+  max-height: 236px;
+
+  min-width: 256px;
+  min-height: 236px;
 }

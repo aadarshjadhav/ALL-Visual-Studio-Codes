@@ -21,6 +21,7 @@ export const routes: Routes = [
     {path:'Office',component:OfficeComponent},
     {path:'Workstation',component:WorkstationComponent},
     {path:'Student',component:StudentComponent},
-    {path:'Dashboard',component:DashboardComponent}
+    {path:'Dashboard',component:DashboardComponent},
+    {path:'',redirectTo:'Home',pathMatch:'full'}
     
 ];
