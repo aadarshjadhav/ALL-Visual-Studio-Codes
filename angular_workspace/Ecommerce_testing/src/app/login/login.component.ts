@@ -6,11 +6,16 @@ import { MyuserlistService } from '../myuserlist.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HttpClientModule, FormsModule, CommonModule, ReactiveFormsModule, MatToolbarModule, MatButtonModule],
+  imports: [HttpClientModule, FormsModule, CommonModule, ReactiveFormsModule, MatToolbarModule, 
+    MatButtonModule,MatInputModule,
+    MatFormFieldModule,
+    ],
   providers: [HttpClientModule, HttpClient, MyuserlistService],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
